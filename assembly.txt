@@ -1,0 +1,46 @@
+1) Find Average of 19H,20H,22H,30H using assembly 8086?
+A)
+data segment
+array DB 19H,20H,22H,30H
+data ends
+
+code segment
+assume CS:code, DS:data
+start:
+mov ax,data
+mov DS,ax
+mov cl,04H
+mov ax,0000H
+rpt:
+add al,array[SI]
+INC SI
+LOOP rpt
+mov bx, 04h
+div bx
+hlt
+code ends
+end start
+
+2) Find Average of 21H,25H,28H,82H using assembly 8086?
+A) 
+data segment
+array DB 21H,25H,28H,82H
+data ends
+
+code segment
+assume CS:code, DS:data
+start:
+mov ax,data
+mov DS,ax
+mov cl,04H
+mov ax,0000H
+rpt:
+add al,array[SI]
+INC SI
+LOOP rpt
+mov bx, 04h
+div bx
+hlt
+code ends
+end start
+
